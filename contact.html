@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Me</title>
+  <!-- Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100">
+
+<!-- Navbar -->
+<header class="bg-gray-900 text-white py-8">
+  <div class="container mx-auto px-4">
+      <nav class="flex items-center justify-between">
+          <h1 class="text-3xl font-bold">Shahid Farooq</h1>
+          <button id="mobileMenuButton" class="text-white focus:outline-none md:hidden">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+              </svg>
+          </button>
+      </nav>
+      <!-- Mobile Menu -->
+      <ul id="mobileMenu" class="hidden md:hidden mt-4 space-y-2">
+          <li><a href="index.html" class="block px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white">Home</a></li>
+          <li><a href="about.html" class="block px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white">About</a></li>
+          <li><a href="https://docs.google.com/spreadsheets/d/13u0pv7U9TDTEZZvLb0l5OwEOEa8Cwr19_to0EqEOvko/edit?usp=drivesdk" class="block px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white">Websheet</a></li>
+          <li><a href="gallery.html" class="block px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white">Gallery</a></li>
+          <li><a href="contact.html" class="block px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white">Contact</a></li>
+      </ul>
+  </div>
+</header>
+
+<style>
+  @media (max-width: 767px) {
+      .container {
+          padding-left: 1rem;
+          padding-right: 1rem;
+      }
+      nav {
+          flex-direction: column;
+          align-items: flex-start;
+      }
+      #mobileMenuButton {
+          order: 2;
+          margin-top: 0.5rem;
+      }
+  }
+</style>
+
+<script>
+  document.getElementById('mobileMenuButton').addEventListener('click', function() {
+      var mobileMenu = document.getElementById('mobileMenu');
+      mobileMenu.classList.toggle('hidden');
+  });
+</script>
+
+
+<!-- Navbar End -->
+
+<!-- Contact Section -->
+<section class="main_heading my-5 mt-20">
+  <div class="text-center">
+    <h1 class="text-4xl font-bold">Contact Me</h1>
+    <hr class="w-1/4 mx-auto border-2 border-gray-700 mt-4">
+  </div>
+  <div class="container mx-auto mt-10 px-4">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <!-- Social Links -->
+      <div>
+        <div class="flex items-center space-x-4 mb-4">
+          <img class="h-12 w-12 rounded-full" src="Facebook.png" alt="">
+          <a href="https://www.facebook.com/profile.php?id=100008667813630&mibextid=ZbWKwL" class="text-blue-500 hover:underline">Facebook/Shahid Farooq</a>
+        </div>
+        <div class="flex items-center space-x-4 mb-4">
+          <img class="h-12 w-12 rounded-full" src="twitter.webp" alt="">
+          <a href="https://x.com/ShahidF02243390?s=09" class="text-blue-500 hover:underline">Twitter/Shahid Farooq</a>
+        </div>
+        <div class="flex items-center space-x-4 mb-4">
+          <img class="h-12 w-12 rounded-full" src="instalogo.jpg" alt="">
+          <a href="https://www.instagram.com/skyrocketseo999?igsh=YzljYTk1ODg3Zg==" class="text-blue-500 hover:underline">Instagram/Shahid Farooq</a>
+        </div>
+        <div class="flex items-center space-x-4 mb-4">
+          <img class="h-12 w-12 rounded-full" src="linkdin log.png" alt="">
+          <a href="https://www.linkedin.com/in/shahid-farooq-guest-posting-and-content-writing-expert-7b11251a3?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="text-blue-500 hover:underline">LinkedIn/Shahid Farooq</a>
+        </div>
+        <div class="flex items-center space-x-4 mb-4">
+          <img class="h-12 w-12 rounded-full" src="whatsapp.png" alt="">
+          <a href="https://wa.me/923046215859" class="text-blue-500 hover:underline">WhatsApp: +92-3046215859</a>
+        </div>
+      </div>
+      <!-- Contact Form -->
+      <div>
+        <h2 class="text-2xl font-bold mb-4">Mail Us</h2>
+        <form action="mailto:umairjee360@gmail.com" enctype="text/plain" class="space-y-4">
+          <div>
+            <label for="Name" class="block font-semibold">Your Name</label>
+            <input type="text" id="Name" name="Name" class="border border-gray-400 rounded-md px-4 py-2 w-full">
+          </div>
+          <div>
+            <label class="block font-semibold">Gender:</label>
+            <label for="Male" class="mr-2">Male</label>
+            <input type="radio" id="Male" name="Gender" class="mr-4">
+            <label for="Female">Female</label>
+            <input type="radio" id="Female" name="Gender">
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            <div>
+              <label for="Country" class="block font-semibold">Country</label>
+              <input type="text" id="Country" class="border border-gray-400 rounded-md px-4 py-2 w-full">
+            </div>
+            <div>
+              <label for="Province" class="block font-semibold">Province</label>
+              <input type="text" id="Province" class="border border-gray-400 rounded-md px-4 py-2 w-full">
+            </div>
+            <div>
+              <label for="City" class="block font-semibold">City</label>
+              <input type="text" id="City" class="border border-gray-400 rounded-md px-4 py-2 w-full">
+            </div>
+            <div>
+              <label for="District" class="block font-semibold">District</label>
+              <input type="text" id="District" class="border border-gray-400 rounded-md px-4 py-2 w-full">
+            </div>
+          </div>
+          <div>
+            <label for="Phone" class="block font-semibold">Phone</label>
+            <input type="text" id="Phone" name="Phone" class="border border-gray-400 rounded-md px-4 py-2 w-full">
+          </div>
+          <div>
+            <label for="Email" class="block font-semibold">Email</label>
+            <input type="text" id="Email" name="Email" class="border border-gray-400 rounded-md px-4 py-2 w-full">
+          </div>
+          <button type="submit" class="bg-blue-500 text-white px-6 py-2 rounded-md hover:bg-blue-600">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Contact Section End -->
+
+<!-- Footer -->
+<footer class="bg-secondary text-center text-white py-4">
+  <p>&copy; Copyright <strong>Shahid Farooq (Guest Posting Expert)</strong></p>
+</footer>
+<!-- Footer End -->
+
+</body>
+</html>
